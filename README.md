@@ -3,8 +3,8 @@ Memory-Units
 
 [![][license-image]][license] 
 ![platform-image](https://img.shields.io/badge/platorms-linux64%20%7C%20osx%20%7C%20windows-lightgrey?style=flat-square) 
-![language](https://img.shields.io/badge/language-c++-blue.svg)
-![c++](https://img.shields.io/badge/std-c++11-blue.svg)
+![language](https://img.shields.io/badge/language-c++-blue.svg?style=flat-square)
+![c++](https://img.shields.io/badge/std-c++11-blue.svg?style=flat-square)
 
 [license-image]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
 [license]: https://github.com/Nandite/PclWalkerViewer/blob/master/LICENSE
