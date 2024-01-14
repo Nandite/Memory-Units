@@ -23,7 +23,7 @@
 // Define the SIZE_INTEGRAL_UNIT_TYPE if it's not already defined in memory_size.h
 using INTEGRAL_UNIT_TYPE = std::int64_t; // Example type
 
-TEST(MemorySizeTest, BytesConstructor) {
+TEST(ConstructorsTestBase2, BytesConstructor) {
     const mu::bytes b1(1000);
     EXPECT_EQ(b1.count(), 1000);
 
@@ -34,7 +34,7 @@ TEST(MemorySizeTest, BytesConstructor) {
     EXPECT_EQ(b3.count(), std::numeric_limits<INTEGRAL_UNIT_TYPE>::max());
 }
 
-TEST(MemorySizeTest, KibibytesConstructor) {
+TEST(ConstructorsTestBase2, KibibytesConstructor) {
     const mu::kibibytes kb1(2);
     EXPECT_EQ(kb1.count(), 2);
 
@@ -45,7 +45,7 @@ TEST(MemorySizeTest, KibibytesConstructor) {
     EXPECT_EQ(kb3.count(), 1000);
 }
 
-TEST(MemorySizeTest, MebibytesConstructor) {
+TEST(ConstructorsTestBase2, MebibytesConstructor) {
     const mu::mebibytes mb1(3);
     EXPECT_EQ(mb1.count(), 3);
 
@@ -56,7 +56,7 @@ TEST(MemorySizeTest, MebibytesConstructor) {
     EXPECT_EQ(mb3.count(), 500);
 }
 
-TEST(MemorySizeTest, GibibytesConstructor) {
+TEST(ConstructorsTestBase2, GibibytesConstructor) {
     const mu::gibibytes gb1(4);
     EXPECT_EQ(gb1.count(), 4);
 
@@ -67,7 +67,7 @@ TEST(MemorySizeTest, GibibytesConstructor) {
     EXPECT_EQ(gb3.count(), 250);
 }
 
-TEST(MemorySizeTest, TebibytesConstructor) {
+TEST(ConstructorsTestBase2, TebibytesConstructor) {
     const mu::tebibytes tb1(5);
     EXPECT_EQ(tb1.count(), 5);
 
@@ -78,7 +78,7 @@ TEST(MemorySizeTest, TebibytesConstructor) {
     EXPECT_EQ(tb3.count(), 100);
 }
 
-TEST(MemorySizeTest, PebibytesConstructor) {
+TEST(ConstructorsTestBase2, PebibytesConstructor) {
     const mu::pebibytes pb1(6);
     EXPECT_EQ(pb1.count(), 6);
 
@@ -89,7 +89,7 @@ TEST(MemorySizeTest, PebibytesConstructor) {
     EXPECT_EQ(pb3.count(), 50);
 }
 
-TEST(MemorySizeTest, ExbibytesConstructor) {
+TEST(ConstructorsTestBase2, ExbibytesConstructor) {
     const mu::exbibytes eb1(7);
     EXPECT_EQ(eb1.count(), 7);
 
@@ -98,9 +98,4 @@ TEST(MemorySizeTest, ExbibytesConstructor) {
 
     const mu::exbibytes eb3(25);
     EXPECT_EQ(eb3.count(), 25);
-}
-
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
 }

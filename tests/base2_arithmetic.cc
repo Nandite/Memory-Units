@@ -366,9 +366,3 @@ TEST(ArithmeticTestBase2, ModuloAssignment) {
     EXPECT_EQ(pb.count(), 1);
     EXPECT_EQ(eb.count(), 1);
 }
-
-int main(int argc, char **argv)
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

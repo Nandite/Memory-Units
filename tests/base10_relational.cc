@@ -23,7 +23,7 @@
 using namespace mu::literals;
 
 
-TEST(MemorySizeRelationalTest, Equality) {
+TEST(RelationalTestBase10, Equality) {
     const mu::bytes b(1000); // 1000 bytes
     const mu::kilobytes kb(1); // 1 kilobyte (equivalent to 1000 bytes)
     const mu::megabytes mb(1); // 1 megabyte
@@ -45,7 +45,7 @@ TEST(MemorySizeRelationalTest, Equality) {
     EXPECT_TRUE(large_mb == one_gb); // 1000 MB should be equal to 1 GB
 }
 
-TEST(MemorySizeRelationalTest, LessThan) {
+TEST(RelationalTestBase10, LessThan) {
     const mu::bytes b(500); // 500 bytes
     const mu::kilobytes kb(1); // 1 kilobyte
     const mu::megabytes mb(1); // 1 megabyte
@@ -72,7 +72,7 @@ TEST(MemorySizeRelationalTest, LessThan) {
     EXPECT_FALSE(large_gb < gb); // 1000 gigabytes is not less than 1 gigabyte
 }
 
-TEST(MemorySizeRelationalTest, NotEqual) {
+TEST(RelationalTestBase10, NotEqual) {
     const mu::bytes b(1000); // 1000 bytes
     const mu::kilobytes kb(1); // 1 kilobyte (equivalent to 1000 bytes)
     const mu::megabytes mb(1); // 1 megabyte
@@ -94,7 +94,7 @@ TEST(MemorySizeRelationalTest, NotEqual) {
     EXPECT_FALSE(large_mb != one_gb); // 1000 MB should be equal to 1 GB
 }
 
-TEST(MemorySizeRelationalTest, RelationalOperators) {
+TEST(RelationalTestBase10, RelationalOperators) {
     const mu::bytes b(500); // 500 bytes
     const mu::kilobytes kb(1); // 1 kilobyte (1000 bytes)
     const mu::megabytes mb(1); // 1 megabyte
@@ -113,9 +113,4 @@ TEST(MemorySizeRelationalTest, RelationalOperators) {
     EXPECT_TRUE(gb >= mb); // 1 gigabyte is greater than or equal to 1 megabyte
     EXPECT_TRUE(tb >= gb); // 1 terabyte is greater than or equal to 1 gigabyte
     EXPECT_TRUE(pb >= pb); // 1 petabyte is equal to itself
-}
-
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
 }

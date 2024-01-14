@@ -22,7 +22,7 @@
 
 using namespace mu::literals;
 
-TEST(MemorySizeCastTestBase10, Downcast) {
+TEST(MemoryCastTestBase10, Downcast) {
     const mu::kilobytes kb(1); // 1 kilobyte
     const mu::megabytes mb(1); // 1 megabyte
     const mu::gigabytes gb(1); // 1 gigabyte
@@ -47,7 +47,7 @@ TEST(MemorySizeCastTestBase10, Downcast) {
 
 }
 
-TEST(MemorySizeCastTestBase10, Upcast) {
+TEST(MemoryCastTestBase10, Upcast) {
     const mu::bytes b(1000); // 1000 kilobyte
     const mu::kilobytes kb(1000); // 1000 kilobyte
     const mu::megabytes mb(1000); // 1000 megabyte
@@ -72,11 +72,4 @@ TEST(MemorySizeCastTestBase10, Upcast) {
 
     const auto pb_to_eb = mu::memory_size_cast<mu::exabytes>(pb); // Cast 1000 petabyte to exabytes
     EXPECT_EQ(pb_to_eb.count(), 1);
-}
-
-
-int main(int argc, char **argv)
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
 }

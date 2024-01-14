@@ -52,9 +52,3 @@ TEST(LiteralOperatorsBase10, LiteralConstruction)
     EXPECT_EQ(pb_large.count(), 1024);
     EXPECT_EQ(eb_large.count(), 1024);
 }
-
-int main(int argc, char **argv)
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
