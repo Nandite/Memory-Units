@@ -1,13 +1,13 @@
 Memory-Units
 ===============
 
-[![][license-image]][license]
-![][platform-image]
+[![][license-image]][license] 
+![platform-image](https://img.shields.io/badge/platorms-linux64%20%7C%20osx%20%7C%20windows-lightgrey?style=flat-square) 
+![language](https://img.shields.io/badge/language-c++-blue.svg)
+![c++](https://img.shields.io/badge/std-c++11-blue.svg)
 
 [license-image]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
 [license]: https://github.com/Nandite/PclWalkerViewer/blob/master/LICENSE
-
-[platform-image]: https://img.shields.io/badge/platorms-linux64%20%7C%20osx%20%7C%20windows-lightgrey?style=flat-square
 
 This project provides a type named memory_size to represent the size of objects in memory. 
 It has been inspired by the [std::chrono](https://en.cppreference.com/w/cpp/chrono) library, 
