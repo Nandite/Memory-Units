@@ -23,6 +23,12 @@
 #include <limits>
 #include <ratio>
 #include <type_traits>
+
+#define MU_VERSION_MAJOR 1
+#define MU_VERSION_MINOR 0
+#define MU_VERSION_PATCH 0
+#define MU_VERSION (MU_VERSION_MAJOR * 10000 + MU_VERSION_MINOR * 100 + MU_VERSION_PATCH)
+
 namespace mu
 {
     using INT_UNIT_TYPE = std::uint64_t;
