@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Papa Libasse Sow.
+// Copyright (c) 2024 Papa Libasse Sow.
 // https://github.com/Nandite/Memory-Units
 // Distributed under the MIT Software License (X11 license).
 //
